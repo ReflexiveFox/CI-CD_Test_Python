@@ -22,7 +22,7 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Upgrade Pip:
+    - name: Upgrade Pip
       run: pip install --upgrade pip
 
     - name: Install dependencies
