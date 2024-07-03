@@ -2,7 +2,7 @@ def main():
     return "Hello, World!"
 
 def greet(name):
-    return "Hello " + name
+    return f"Hello {name}!"
 
 def add_numbers(a, b):
     return a + b
