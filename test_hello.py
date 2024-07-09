@@ -1,12 +1,13 @@
 import unittest
-from hello import main, greet, add_numbers, calculate_factorial, calculate_fibonacci
+from hello import greet
+from math_utils import add_numbers, calculate_factorial, calculate_fibonacci
 
 class TestHello(unittest.TestCase):
 
-    def test_main(self):
+    def test_greet(self):
         try:
-            self.assertEqual(main(), "Hello World!")
-            print(f"main() result: {main()}")
+            self.assertEqual(greet(), "Hello World!")
+            print(f"greet() result: {greet()}")
         except AssertionError as e:
             print(f"AssertionError: {e}")
 
