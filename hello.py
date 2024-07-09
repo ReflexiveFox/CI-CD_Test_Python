@@ -17,19 +17,24 @@ def calculate_factorial(number):
 def calculate_fibonacci(number):
     if not isinstance(number, int) or number < 0:
         raise ValueError("Input must be a non-negative integer")
+
     if number == 0:
-        return 0
+        return [0]
     elif number == 1:
-        return 1
+        return [0, 1]
+
+    sequence = [0, 1]
     a, b = 0, 1
-    for _ in range(2, n+1):
+
+    for _ in range(2, number+1):
         a, b = b, a + b
-    return b
+        sequence.append(b)
+    return sequence
 
 a = 3
 b = 4
-factorial_number = 50
-fibonacci_number = 5
+factorial_number = 5
+fibonacci_number = 6
 if __name__ == "__main__":
     print(main())
     print(greet("Lorenzo"))
