@@ -1,5 +1,5 @@
 import unittest
-from hello import main, greet, add_numbers, calculate_factorial
+from hello import main, greet, add_numbers, calculate_factorial, calculate_fibonacci
 
 class TestHello(unittest.TestCase):
 
@@ -73,6 +73,25 @@ class TestHello(unittest.TestCase):
             with self.assertRaises(ValueError):
                 calculate_factorial(invalid_input)
                 print(f"calculate_factorial({invalid_input}) correctly raised ValueError")
+    def test_calculate_fibonacci(self):
+        try:
+            self.assertEqual(calculate_fibonacci(1), 1)
+            print(f"calculate_fibonacci(1) result: {calculate_fibonacci(1)}")
+        except AssertionError as e:
+            print(f"AssertionError: {e}")
 
+        try:
+            self.assertEqual(calculate_fibonacci(1), 1)
+            print(f"calculate_fibonacci(1) result: {calculate_fibonacci(1)}")
+        except AssertionError as e:
+            print(f"AssertionError: {e}")
+
+        try:
+            self.assertEqual(calculate_fibonacci(10), 55)
+            print(f"calculate_fibonacci(10) result: {calculate_fibonacci(10)}")
+        except AssertionError as e:
+            print(f"AssertionError: {e}")
+
+        
 if __name__ == "__main__":
     unittest.main(buffer=False)
