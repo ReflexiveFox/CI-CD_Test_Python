@@ -75,19 +75,19 @@ class TestHello(unittest.TestCase):
                 print(f"calculate_factorial({invalid_input}) correctly raised ValueError")
     def test_calculate_fibonacci(self):
         try:
-            self.assertEqual(calculate_fibonacci(1), 1)
+            self.assertEqual(calculate_fibonacci(0), [0])
             print(f"calculate_fibonacci(1) result: {calculate_fibonacci(1)}")
         except AssertionError as e:
             print(f"AssertionError: {e}")
 
         try:
-            self.assertEqual(calculate_fibonacci(1), 1)
+            self.assertEqual(calculate_fibonacci(1), [0, 1])
             print(f"calculate_fibonacci(1) result: {calculate_fibonacci(1)}")
-        except AssertionError as e:
+        except AssertionError as e
             print(f"AssertionError: {e}")
 
         try:
-            self.assertEqual(calculate_fibonacci(10), 55)
+            self.assertEqual(calculate_fibonacci(10), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
             print(f"calculate_fibonacci(10) result: {calculate_fibonacci(10)}")
         except AssertionError as e:
             print(f"AssertionError: {e}")
