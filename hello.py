@@ -1,9 +1,6 @@
 # hello.py 
 
-def greet():
-    return "Hello World!"
-
-def greet(name):
+def greet(name="World"):
     return f"Hello {name}!"
 
 if __name__ == "__main__":
