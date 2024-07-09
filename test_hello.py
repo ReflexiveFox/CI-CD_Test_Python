@@ -83,7 +83,7 @@ class TestHello(unittest.TestCase):
         try:
             self.assertEqual(calculate_fibonacci(1), [0, 1])
             print(f"calculate_fibonacci(1) result: {calculate_fibonacci(1)}")
-        except AssertionError as e
+        except AssertionError as e:
             print(f"AssertionError: {e}")
 
         try:
