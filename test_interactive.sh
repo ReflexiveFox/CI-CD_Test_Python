@@ -4,7 +4,7 @@
 set timeout 10
 
 # Start the interactive program
-spawn python interactive.py
+spawn python app.py
 
 # First interaction: Choose option 1 (Greet)
 expect {
