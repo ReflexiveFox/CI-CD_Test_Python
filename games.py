@@ -14,7 +14,7 @@ def guessing_game():
         attempts += 1
         
         if guessed_number < min_number or guessed_number > max_number:
-                print(f"This number ({guessed_number}) is out of range!\nQuitting game...")
+            print(f"This number ({guessed_number}) is out of range!\nQuitting game...")
             break
         
         elif guessed_number < number_to_guess:
