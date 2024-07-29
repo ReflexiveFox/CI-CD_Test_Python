@@ -15,7 +15,7 @@ send "Tester\r"
 # Expect greeting message
 expect 
 {
-    "Hello Tester!\r"{}
+    "Hello Tester!\r" {}
     timeout 
     {
         puts "Timeout while waiting for greeting"
