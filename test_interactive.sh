@@ -30,7 +30,7 @@ expect {
 
 # Expect the greeting message
 expect {
-    "Hello Tester!\r"
+    "Hello Tester!\r" {}
     timeout {
         puts "Timeout while waiting for greeting"
         exit 1
@@ -72,7 +72,7 @@ expect {
 
 # Expect the sum result
 expect {
-    "The sum of 3.0 and 4.0 is 7.0\r"
+    "The sum of 3.0 and 4.0 is 7.0\r" {}
     timeout {
         puts "Timeout while waiting for sum result"
         exit 1
@@ -103,7 +103,7 @@ expect {
 
 # Expect the factorial result
 expect {
-    "The factorial of 5 is: 120\r"
+    "The factorial of 5 is: 120\r" {}
     timeout {
         puts "Timeout while waiting for factorial result"
         exit 1
@@ -134,7 +134,7 @@ expect {
 
 # Expect the Fibonacci result
 expect {
-    "The Fibonacci sequence up to 5 is: \[0, 1, 1, 2, 3, 5\]\r"
+    "The Fibonacci sequence up to 5 is: \[0, 1, 1, 2, 3, 5\]\r" {}
     timeout {
         puts "Timeout while waiting for Fibonacci result"
         exit 1
