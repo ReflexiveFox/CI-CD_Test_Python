@@ -5,7 +5,9 @@ import hello
 import math_utils
 import games
 
-def interactive():
+def interactive(inputs=None):
+    input_func = inputs.pop if inputs else input
+
     while True:
         print("+-----------------------------+")
         print("| Choose an option:")
@@ -17,25 +19,25 @@ def interactive():
         print("\n| 6. Exit")
         print("+-----------------------------+")
 
-        choice = input("\nEnter your choice: ")
+        choice = input_func("\nEnter your choice: ")
         
         if choice == '1':
             print("\n~~~~~~ Greeting time ~~~~~~")
-            name = str(input("Enter a name: "))
+            name = str(input_func("Enter a name: "))
             print(f"\n{hello.greet(name)}")
             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
         elif choice == '2':
             print("\n~~~~~~ Sum 2 numbers ~~~~~~")
-            num_A = input("Enter the first number: ")
-            num_B = input("Enter the second number: ")
+            num_A = float(input_func("Enter first number: "))
+            num_B = float(input_func("Enter second number: "))
 
             print(f"\nThe sum of {num_A} and {num_B} is {math_utils.add_numbers(num_A, num_B)}")
             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
         
         elif choice == '3':
             print("\n~~~~~~ Factorial calculation ~~~~~~")
-            factorial_num = int(input("Enter a non-negative integer number: "))
+            factorial_num = int(input_func("Enter a non-negative integer number: "))
             if factorial_num > 0:
                 print(f"The factorial of {factorial_num}: {math_utils.calculate_factorial(factorial_num)}")
             else:
@@ -45,7 +47,7 @@ def interactive():
         
         elif choice == '4':
             print("\n~~~~~~ Fibonacci serie ~~~~~~")
-            fibo_num = int(input("Enter a non-negative integer number: "))
+            fibo_num = int(input_func("Enter a non-negative integer number: "))
             if fibo_num > 0:
                 print(f"Fibonacci numbers for {fibo_num}: {math_utils.calculate_fibonacci(fibo_num)}")
             else:
