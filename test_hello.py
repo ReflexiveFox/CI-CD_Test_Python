@@ -1,27 +1,27 @@
 import unittest
-from hello import greet
+import hello
 from math_utils import add_numbers, calculate_factorial, calculate_fibonacci
 
 class TestHello(unittest.TestCase):
 
     def test_greet(self):
         try:
-            self.assertEqual(greet(), "Hello World!")
-            print(f"greet() result: {greet()}")
+            self.assertEqual(hello.greet(), "Hello World!")
+            print(f"greet() result: {hello.greet()}")
         except AssertionError as e:
             print(f"AssertionError: {e}")
 
     def test_greet(self):
         person_1 = "Lorenzo"
         try:
-            self.assertEqual(greet(), f"Hello World!")
-            print(f"greet() result: {greet()}")
+            self.assertEqual(hello.greet(), f"Hello World!")
+            print(f"greet() result: {hello.greet()}")
         except AssertionError as e:
             print(f"AssertionError: {e}")
         
         try:
-            self.assertEqual(greet(person_1), f"Hello {person_1}!")
-            print(f"greet({person_1}) result: {greet(person_1)}")
+            self.assertEqual(hello.greet(person_1), f"Hello {person_1}!")
+            print(f"greet({person_1}) result: {hello.greet(person_1)}")
         except AssertionError as e:
             print(f"AssertionError: {e}")
 
