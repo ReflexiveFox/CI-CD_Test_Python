@@ -37,9 +37,9 @@ def interactive(inputs=None):
         
         elif choice == '3':
             print("\n~~~~~~ Factorial calculation ~~~~~~")
-            factorial_num = int(input_func("Enter a non-negative integer number: "))
+            factorial_num = int(input_func("Enter a non-negative integer: "))
             if factorial_num > 0:
-                print(f"The factorial of {factorial_num}: {math_utils.calculate_factorial(factorial_num)}")
+                print(f"The factorial of {factorial_num} is: {math_utils.calculate_factorial(factorial_num)}")
             else:
                 print("Input not valid, back to main menu.")
 
@@ -47,9 +47,9 @@ def interactive(inputs=None):
         
         elif choice == '4':
             print("\n~~~~~~ Fibonacci serie ~~~~~~")
-            fibo_num = int(input_func("Enter a non-negative integer number: "))
+            fibo_num = int(input_func("Enter a non-negative integer: "))
             if fibo_num > 0:
-                print(f"Fibonacci numbers for {fibo_num}: {math_utils.calculate_fibonacci(fibo_num)}")
+                print(f"The Fibonacci sequence up to {fibo_num} is: {math_utils.calculate_fibonacci(fibo_num)}")
             else:
                 print("Input not valid, back to main menu.")
 
