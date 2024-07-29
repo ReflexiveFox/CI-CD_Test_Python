@@ -19,7 +19,7 @@ expect {
 
 # Enter name after choosing Greet
 expect {
-    "Enter your name: " {
+    "Enter a name: " {
         send "Tester\r"
     }
     timeout {
@@ -30,7 +30,7 @@ expect {
 
 # Expect the greeting message
 expect {
-    "Hello, Tester!\r"
+    "Hello Tester!\r"
     timeout {
         puts "Timeout while waiting for greeting"
         exit 1
@@ -72,7 +72,7 @@ expect {
 
 # Expect the sum result
 expect {
-    "The sum is: 7.0\r"
+    "The sum of 3.0 and 4.0 is 7.0\r"
     timeout {
         puts "Timeout while waiting for sum result"
         exit 1
