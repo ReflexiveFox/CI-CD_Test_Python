@@ -1,4 +1,3 @@
-
 #!/usr/bin/expect -f
 
 # Set timeout to 10 seconds for all expect commands
